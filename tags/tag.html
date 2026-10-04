@@ -1,0 +1,19 @@
+---
+eleventyExcludeFromCollections: true
+layout: page.njk
+permalink: tags/{{ tag | slug }}.html
+pagination:
+    data: collections.tags
+    size: 1
+    alias: tag
+title: "{{ tag }}"
+---
+
+<h2 class="post-head">posts tagged with <em>{{ tag }}</em></h2>
+<div id="index">
+    {%- for post in collections.posts | reverse -%}
+        {%- if tag in post.data.tags-%}
+        <p><span class="list-post-date">{{ post.date | indexDate }}</span> <a class="list-post-title" href="{{ post.url }}">{{ post.data.title }}</a></p>
+        {%- endif -%}
+    {%- endfor -%}
+</div>

@@ -1,0 +1,12 @@
+---
+title: tags
+layout: page.njk
+permalink: tags.html
+---
+
+<h2 class="post-head">tags</h2>
+<div class="tag-cloud">
+    {%- for tag in collections.tags -%}
+        <a class="tag" href="/tags/{{ tag | slug }}.html">{{ tag }}</a>
+    {%- endfor -%}
+</div>

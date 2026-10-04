@@ -1,0 +1,19 @@
+---
+layout: page.njk
+permalink: /
+eleventyExcludeFromCollections: true
+templateLanguageOverride: njk
+---
+
+<h2 class="post-head">latest</h2>
+<div id="index">
+    {%- for post in collections.posts | reverse -%}
+    <p><span class="list-post-date">{{ post.date | indexDate }}</span> <a class="list-post-title" href="{{ post.url }}">{{ post.data.title }}</a> 
+        {%- if post.data.tags -%}
+        {%- for tag in post.data.tags -%}
+        <a class="list-post-tag" href="{{ paths.tagDir }}{{ tag }}.html">{{ tag }}</a>
+        {%- endfor -%}
+        {%- endif -%}
+    </p> 
+    {%- endfor -%}
+</div>

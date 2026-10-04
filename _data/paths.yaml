@@ -1,0 +1,5 @@
+css: "/css/styles.css"
+home: "/"
+tags: "/tags.html"
+tagDir: "/tags/"
+postDir: "/posts/"
