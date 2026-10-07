@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Getting Started: Installation and Deployment"
-date: 09-26-2026
+date: 2026-09-26
 tags: [attention, appetite, fastidious, approve, ritual]
 ---
 
