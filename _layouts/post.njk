@@ -15,14 +15,16 @@ layout: base.njk
     </div>     
     <div class="post-header">
         <h1 class="giant-text">{{ page.date | postDate }}</h1>
-        <div class="tag-list">
-        {% if tags %}
-            {% for tag in tags %}
-                <a href="{{ paths.tagDir }}{{ tag }}.html" class="tag">{{ tag }}</a>
-            {% endfor %}
-        {% endif %}
+        <div class="title-wrapper">
+            <div class="tag-list">
+            {% if tags %}
+                {% for tag in tags %}
+                    <a href="{{ paths.tagDir }}{{ tag }}.html" class="tag">{{ tag }}</a>
+                {% endfor %}
+            {% endif %}
+            </div>
+            <h2 class="post-title post-head">{{ title }}</h2>
         </div>
-        <h2 class="post-title post-head">{{ title }}</h2>
     </div>
     <div class="main-post">
         {{ content | safe }}

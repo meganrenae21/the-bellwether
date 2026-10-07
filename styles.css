@@ -256,13 +256,12 @@ h2.post-title {
   line-height: 0.8;
   margin: 0;
   padding: 0;
-  text-align: right !important;
 }
 
 .tag-list {
   display: flex;
+  flex-direction: row;
   padding-right: 1em;
-  padding-left: 1em;
 }
 
 .tag {
@@ -300,6 +299,13 @@ h2.post-title {
 
 .tag-cloud {
   text-align: justify;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 1em;
 }
 
 @media (orientation: landscape) {
@@ -341,8 +347,7 @@ h2.post-title {
     flex-direction: row;
   }
   .tag-list {
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .sticky-header {
     margin-left: 25%;
@@ -359,6 +364,10 @@ h2.post-title {
   .main-post > h6 {
     width: 40%;
     margin-left: 40%;
+  }
+  .title-wrapper {
+    justify-content: flex-end;
+    align-items: flex-start;
   }
 }
 
@@ -377,9 +386,14 @@ h2.post-title {
     align-items: center;
   }
   .tag-list {
-    flex-direction: row;
     justify-content: center;
     width: 100%;
     z-index: 2;
+  }
+  .title-wrapper {
+    align-items: center;
+  }
+  .post-title {
+    text-align: center;
   }
 }
