@@ -6,7 +6,7 @@ title: about
 
 ## about me { .post-head}
 
-<img src="https://picsum.photos/id/823/400/300" class="about-img" alt="portrait of a woman taking a photograph" />
+<img src={% asset "about-page-image.jpg" %} class="about-img" alt="portrait of a woman taking a photograph" />
 
 ### mutua cum coniunx nulla
 

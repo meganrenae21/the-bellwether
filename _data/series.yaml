@@ -1,0 +1,11 @@
+- title: Docs
+  posts:
+  - title: "Introduction: Why Choose the Bellwether?"
+    permalink: /posts/20260927-introduction.html
+    order: 1
+  - title: "Getting Started: Installation and Deployment"
+    permalink: /posts/20260926-getting-started.html
+    order: 2
+  - title: "Project Structure: Finding Your Way Around"
+    permalink: /posts/20260925-project-structure.html
+    order: 3

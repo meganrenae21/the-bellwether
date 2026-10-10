@@ -4,7 +4,8 @@
   "description": "a two-tone content-focused 11ty starter kit",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "new-post": "node tools/new-post.js"
   },
   "keywords": [],
   "author": "",
@@ -13,8 +14,8 @@
   "dependencies": {
     "@11ty/eleventy": "^3.1.6",
     "luxon": "^3.7.2",
-    "yaml": "^2.9.1",
     "markdown-it": "^15.0.2",
-    "markdown-it-attrs": "^5.0.1"
+    "markdown-it-attrs": "^5.0.1",
+    "yaml": "^2.9.1"
   }
 }

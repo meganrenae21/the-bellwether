@@ -1,8 +1,9 @@
 ---
 layout: post.njk
-title: "Introduction: Why Choose The Bellwether?"
+title: "Introduction: Why Choose the Bellwether?"
 date: 2026-09-27
 tags: [fine, species]
+post_series: Docs
 ---
 ###  Welcome to The Bellwether {.sticky-header}
 

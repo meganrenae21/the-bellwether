@@ -27,6 +27,24 @@ layout: base.njk
         </div>
     </div>
     <div class="main-post">
+        {% if post_series %}
+            {% for item in series %}
+                {% if item.title == post_series %}
+                    <div class="series-list">
+                        Part of the <strong>{{ item.title }}</strong> series
+                        <ol>
+                        {% for post in item.posts | sort(false, false, 'order') %}
+                            {% if post.title == title %}
+                                <li><strong>{{ post.title }}</strong></li>
+                            {% else %}
+                            <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        </ol>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
         {{ content | safe }}
     </div>
 </div>

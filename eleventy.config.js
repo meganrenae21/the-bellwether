@@ -52,6 +52,19 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({ "**/*.css": "css" })
 
+    eleventyConfig.addPassthroughCopy("assets")
+
+    eleventyConfig.addShortcode("asset", function(filename) {
+        if (this.page.url.startsWith("/posts/")) {
+            return `/assets/posts/${this.page.fileSlug}/${filename}`;
+        }
+
+        return `/assets/pages/${this.page.fileSlug}/${filename}`;
+    })
+    eleventyConfig.addShortcode("baseAsset", function(filename) {
+        return `/assets/base/${filename}`;
+    })
+
     const mdoptions = {
         html: true,
         breaks: true,
@@ -79,7 +92,4 @@ export default function (eleventyConfig) {
     })
 
     eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents));
-
-    const cssPath = "/css/styles.css";
-    eleventyConfig.addGlobalData("cssPath", cssPath);
 }
