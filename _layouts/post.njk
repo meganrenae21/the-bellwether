@@ -4,9 +4,7 @@ layout: base.njk
 
 <div class="post-wrapper">
     <div class="top-bar">
-        <div class="top-bar-logo-bg">
-            <a class="top-bar-logo" href="{{ paths.home }}"><h1>bw</h1></a>
-        </div>
+            <a class="top-bar-logo" href="{{ paths.home }}"><i class="fa-solid fa-bell fa-rotate-by" style="color: #2a051d; --fa-rotate-angle: -35deg;"></i></a>
         <div id="link-bar">
             {%- for page in collections.pages -%}
                 <a class="nav-link" href="{{ page.url }}">{{ page.data.title }}</a>
@@ -49,5 +47,25 @@ layout: base.njk
             {% endfor %}
         {% endif %}
         {{ content | safe }}
+    </div>
+    {% set currentIndex = -1 %}
+    {% for post in collections.posts %}
+        {% if post.url == page.url %}
+            {% set currentIndex = loop.index0 %}
+        {% endif %}
+    {% endfor %}
+    {% set previousPost = collections.posts[currentIndex - 1] %}
+    {% set nextPost = collections.posts[currentIndex + 1] %}
+    <div class="bottom-post-navigation">
+        <div class="previous-post-wrapper">
+            {% if previousPost %}
+              ⟵ <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+            {% endif %}
+        </div>
+        <div class="next-post-wrapper">
+            {% if nextPost %}
+                <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a> ⟶
+            {% endif %}
+        </div>
     </div>
 </div>

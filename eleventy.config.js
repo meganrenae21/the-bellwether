@@ -1,5 +1,6 @@
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
+import markdownItBracketedSpans from 'markdown-it-bracketed-spans'
 import { DateTime } from "luxon";
 import YAML from "yaml"
 
@@ -52,7 +53,7 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({ "**/*.css": "css" })
     
-    eleventyConfig.addPassthroughCopy("js")
+    eleventyConfig.addPassthroughCopy("js/*.js")
 
     eleventyConfig.addPassthroughCopy("assets")
 
@@ -72,7 +73,7 @@ export default function (eleventyConfig) {
         breaks: true,
         linkify: true,
     };
-    const markdownLib = markdownIt(mdoptions).use(markdownItAttrs, {
+    const markdownLib = markdownIt(mdoptions).use(markdownItBracketedSpans).use(markdownItAttrs, {
         leftDelimiter: '{',
         rightDelimiter: '}',
         allowedAttributes: []
