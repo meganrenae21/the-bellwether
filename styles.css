@@ -472,7 +472,8 @@ th {
   .main-post > h4,
   .main-post > h5,
   .main-post > h6,
-  .main-post > table {
+  .main-post > table,
+  .main-post > dl {
     width: 40%;
     margin-left: 40%;
   }

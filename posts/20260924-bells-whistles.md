@@ -160,10 +160,14 @@ However, we can exert more control by adding a class. The Bellwether adds four c
 
 In portrait mode and on pages, images with a `large` and `medium` class have the same properties of an image with a `small` class and take up 100% of the text body without extending beyond the viewport. {.sidenote}
 
-- `large`:: The image extends to left and right of the text body.
-- `medium`:: The image extends to the right of the text body.
-- `small`:: The image takes up 100% of the text body.
-- `xsmall`:: The image is centered and takes up 50% of the text body.
+`large`
+: The image extends to left and right of the text body.
+`medium`
+: The image extends to the right of the text body.
+`small`
+: The image takes up 100% of the text body.
+`xsmall`
+: The image is centered and takes up 50% of the text body.
 
 To add classes, we can use the Markdown-It-Attrs syntax from above:
 
@@ -329,39 +333,3 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(<plugin-name>);
 }
 ```
-
-### Creating Posts and Pages {.sticky-header}
-
-Pages and Posts are the two primary custom [collections](https://www.11ty.dev/docs/collections/) which power The Bellwether. 
-
-- *Pages* represent the static content of your site -- the stuff that has relevance regardless of age.
-- *Posts* are the feeds of content that gets put out on a regular basis: the stuff that ages.
-  
-#### Adding a New Post
-
-To create a new post, just add a new file in the `posts/` folder in the root directory. Posts can have an `.html`, `.md`, or `.njk` extension, but I recommend `.md` to allow the markdown format. All three extensions will recognize the nunjucks templating language thanks to the configuration. 
-
-##### Required frontmatter
-
-The front matter is written in YAML and is the very first thing in the file.
-
-| Required Fields | Optional |
-|:----------------|:---------|
-| **layout** -- this MUST be post.njk   | **tags** -- should be in the format of a list, even if only one |
-| **title** -- I recommend putting this in quotation marks | **post_series** -- required if part of series |
-| **date** -- recommended format YYYY-MM-DD |   |
-
-#### Adding a New Page
-
-Any file created in the root directory with an `.md`, `.njk`, or `.html` extension is considered a *page*.
-
-##### Frontmatter for Pages
-
-Pages have different frontmatter requirements from Posts, but it's still important.
-
-| Field | Description | Required? |
-|:------|:------------|:----------|
-| **layout** | Must be page.njk | Yes |
-| **title** | The title of the page | Yes, IF it is to appear on navigation bar |
-| **permalink** | Path relative to site path | No |
-| **eleventyExcludeFromCollections** | Keep from appearing on navigation bar | Yes, IF not wanting to appear on navigation bar |

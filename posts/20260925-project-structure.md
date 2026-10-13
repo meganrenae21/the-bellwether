@@ -29,9 +29,12 @@ After your first build, your root directory should look like this:
 
 Notice that three folders are prefixed by an underscore (_). Files in these folders are NOT processed as "input" or source files during the build process:
 
-- `_data/`:: This folder stores site-wide variables used in templates.
-- `_layouts/`:: This folder stores base templates (written in the [Nunjucks](https://mozilla.github.io/nunjucks/) templating language) for the static pages.
-- `_sites/`:: This is where the build, or the "output" of the site goes.
+`_data/`
+: This folder stores site-wide variables used in templates.
+`_layouts/`
+: This folder stores base templates (written in the [Nunjucks](https://mozilla.github.io/nunjucks/) templating language) for the static pages.
+`_sites/`
+: This is where the build, or the "output" of the site goes.
 
 The Bellwether's configuration file (in `eleventy.config.js`) has explicitly added Nunjucks files as a templating format to build from. That means, any files in Nunjucks format (ending in a `.njk` suffix) that are not in an excluded folder *should* be included in the build, in addition to any markdown (`.md`) and HTML (`.html`) files which are included in the input by default. The Bellwether's configuration explicitly includes the `styles.css` file as an input file. All other files are ignored in the build process, regardless of whether they are in an ignored folder.
 
@@ -86,9 +89,12 @@ Every page that has its own assets should have its own folder (titled by the pag
 
 The `_layouts` folder includes templates used across the site.
 
-- `base.njk`:: This is the base template that is used on every page which includes the head metadata and links the CSS stylesheet.
-- `page.njk`:: This is the physical layout for top-level pages.
-- `post.njk`:: This is the physical layout for blog posts.
+`base.njk`
+: This is the base template that is used on every page which includes the head metadata and links the CSS stylesheet.
+`page.njk`
+: This is the physical layout for top-level pages.
+`post.njk`
+: This is the physical layout for blog posts.
 
 ### The Configuration File {.sticky-header}
 

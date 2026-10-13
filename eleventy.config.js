@@ -1,6 +1,7 @@
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItBracketedSpans from 'markdown-it-bracketed-spans'
+import { dl } from "@mdit/plugin-dl"
 import { DateTime } from "luxon";
 import YAML from "yaml"
 
@@ -77,7 +78,7 @@ export default function (eleventyConfig) {
         leftDelimiter: '{',
         rightDelimiter: '}',
         allowedAttributes: []
-    });
+    }).use(dl);
     eleventyConfig.setLibrary("md", markdownLib)
 
     eleventyConfig.addFilter("indexDate", (dateObj) => {
