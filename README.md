@@ -18,6 +18,7 @@
   - [Contributing](#contributing)
   - [Inspiration \& Credits](#inspiration--credits)
   - [Author](#author)
+  - [Changelog](#changelog)
 
 ## Description
 
@@ -30,7 +31,7 @@ The Bellwether is a minimalist two-tone 11ty starter kit made with long-form con
 
 ## Installation
 
-1. Download and extract the latest release or open a terminal and run:
+1. Download and extract the latest release or, for the most recent changes, open a terminal and run:
 
 ```bash
 git clone https://github.com/meganrenae21/the-bellwether.git
@@ -73,3 +74,9 @@ Please submit an [issue](https://github.com/meganrenae21/the-bellwether/issues) 
 
 [Megan Renae](http://meganrenae.me)  
 <a href='https://ko-fi.com/C0C8DB54U' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi4.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+## Changelog
+
+| Date | Version | Update |
+|------|---------|--------|
+| 10/14/25 | v1.0.2 | Updated CSS media queries to make posts more mobile responsive |

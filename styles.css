@@ -393,7 +393,7 @@ th {
   padding: 1%;
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (width >= 960px) {
   body {
     flex-direction: row;
   }
@@ -543,7 +543,7 @@ th {
   }
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait) or (width < 960px) {
   body {
     flex-direction: column;
   }
