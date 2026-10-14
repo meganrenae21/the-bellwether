@@ -15,6 +15,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Additional Documentation](#additional-documentation)
+  - [Contributing](#contributing)
   - [Inspiration \& Credits](#inspiration--credits)
   - [Author](#author)
 
@@ -54,6 +55,10 @@ You can rebuild the site at any time by running `npm run dev` (which will open a
 ## Additional Documentation
 
 Please refer to the [live demo](https://the-bellwether.meganrenae.me) for the full, extensive documentation.
+
+## Contributing
+
+Please submit an [issue](https://github.com/meganrenae21/the-bellwether/issues) to report any bug or make a feature request. Please do not submit a pull request before submitting an issue and having a discussion with me (Megan). 
 
 ## Inspiration & Credits
 
